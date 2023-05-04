@@ -1,3 +1,5 @@
+// import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import './categories_screen.dart';
 
@@ -14,7 +16,32 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'DeliMeals',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        canvasColor: const Color.fromRGBO(255, 254, 229, 1),
+        fontFamily: 'Raleway',
+        // textTheme: ThemeData.light().textTheme.copyWith(
+        //       bodyText1: const TextStyle(
+        //         color: Color.fromRGBO(20, 51, 51, 1),
+        //       ),
+        //       bodyText2: const TextStyle(
+        //         color: Color.fromRGBO(20, 51, 51, 1),
+        //       ),
+        //       titleSmall: const TextStyle(
+        //         fontSize: 24,
+        //         fontFamily: 'RobotoCondensed',
+        //       ),
+        //     ),
+        textTheme: const TextTheme(
+          // titleSmall:
+          //     const TextStyle(fontSize: 24, fontFamily: 'RobotoCondensed'),
+          bodyText1: TextStyle(
+            color: Color.fromRGBO(255, 254, 229, 1),
+          ),
+          // bodyText2: TextStyle(
+          //   color: Color.fromRGBO(255, 254, 229, 1),
+          // ),
+        ),
+        colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.blue)
+            .copyWith(secondary: Colors.amber),
       ),
       home: const CategoriesScreen(),
     );
